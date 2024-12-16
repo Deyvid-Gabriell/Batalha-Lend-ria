@@ -1,0 +1,191 @@
+@keyframes arceusAttack {
+    
+    0%{
+        transform: translateX(0px);
+    }
+    20%{
+        transform: translateX(100px);
+    }
+
+    40%{
+        transform: translateX(300px);
+    }
+
+    60%{
+        transform: translateX(500px);
+    }
+
+    70%{
+        transform: translateX(600px);
+    }
+
+    80%{
+        transform: translateX(400px);
+    }
+
+    90%{
+        transform: translateX(250px);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+    
+}
+
+@keyframes giratinaAttack {
+    
+    0%{
+        transform: translateX(0px);
+    }
+    20%{
+        transform: translateX(-100px);
+    }
+
+    40%{
+        transform: translateX(-300px);
+    }
+
+    60%{
+        transform: translateX(-500px);
+    }
+
+    70%{
+        transform: translateX(-600px);
+    }
+
+    80%{
+        transform: translateX(-400px);
+    }
+
+    90%{
+        transform: translateX(-250px);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+    
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+.fightarea{
+    display: flex;
+    width: 100%;
+    height: 75%;
+    background-image: url("./images/stage.avif");
+    background-size: cover;
+    background-position:bottom ;
+}
+
+.monster, .char{
+    flex: 1;
+}
+
+.versus{
+    font-size: 70px;
+    font-family: "Overlock SC", sans-serif;
+    user-select: none;
+    margin-top: 10px;
+}
+
+.lifebar{
+    width: 90%;
+    border: 1px solid black;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.bar{
+    background-color: red;
+    height: 28px;
+    border-radius: inherit;
+    transition: linear 0.5s;
+}
+
+.char-info,
+.monster-info{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.imgchar{
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: 3px solid gold;
+}
+
+strong{
+    color: white;
+    font-size: 20px;
+}
+
+.imgchar{
+    margin: 0px 7px 0px 7px ;
+}
+
+.imgchar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+}
+
+.charsprite{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+button{
+    border: 2px solid gold;
+    padding: 10px 70px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.600);
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.monster .charsprite img{
+    width: 400px;
+    height: 250px;
+}
+
+.char .charsprite img{
+    width: 250px;
+    height: 250px;
+}
+
+.log{
+    color: orange;
+    line-height: 40px;
+    font-size: 22px;
+    width: 100%;
+    height: 25%;
+    background-color: #0d0d0d;
+    overflow-y: scroll;
+}
+
+.arceus-attack{
+    animation: arceusAttack 0.8s linear;
+}
+
+.giratina-attack{
+    animation: giratinaAttack 0.8s linear;
+}
